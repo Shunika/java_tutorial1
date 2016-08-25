@@ -46,7 +46,7 @@ public class GroupCreationTest {
 
     gotoGroupPage(); //выделили вспомогательный метод
     initGroupCreation();//выделили вспомогательный метод
-    fillGroupForm("test1", "test2", "test3");//выделили вспомогательный метод
+    fillGroupForm(new GroupData("test1", "test2", "test3")); //создался новый объект с параметрами
     submitGroupCreation();//выделили вспомогательный метод
     returnToGroupPage();//выделили вспомогательный метод
   }
@@ -59,16 +59,16 @@ public class GroupCreationTest {
     wd.findElement(By.name("submit")).click();
   }
 
-  private void fillGroupForm(String name, String header, String footer) {
+  private void fillGroupForm(GroupData groupData) {//добавлен вспомогательный объект (ParametrObject)
     wd.findElement(By.name("group_name")).click();
     wd.findElement(By.name("group_name")).clear();
-    wd.findElement(By.name("group_name")).sendKeys(name);//добавили параметр name
+    wd.findElement(By.name("group_name")).sendKeys(groupData.getName());//добавили параметр name
     wd.findElement(By.name("group_header")).click();
     wd.findElement(By.name("group_header")).clear();
-    wd.findElement(By.name("group_header")).sendKeys(header);//добавили параметр
+    wd.findElement(By.name("group_header")).sendKeys(groupData.getHeader());//добавили параметр
     wd.findElement(By.name("group_footer")).click();
     wd.findElement(By.name("group_footer")).clear();
-    wd.findElement(By.name("group_footer")).sendKeys(footer);//добавили параметр
+    wd.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());//добавили параметр
   }
 
   private void initGroupCreation() {
