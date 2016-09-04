@@ -11,7 +11,7 @@ public class HelperBase {
   protected FirefoxDriver wd;
 
   public HelperBase(FirefoxDriver wd) {
-    this.wd=wd;
+    this.wd = wd;
   }
 
   protected void click(By locator) {
@@ -23,10 +23,13 @@ public class HelperBase {
     wd.findElement(locator).clear();//добавили параметр локатор
     wd.findElement(locator).sendKeys(text);//добавили параметр локатор, text
   }
+
   public boolean isAlertPresent() {
     try {
       wd.switchTo().alert();
       return true;
     } catch (NoAlertPresentException e) {
       return false;
+    }
+  }
 }

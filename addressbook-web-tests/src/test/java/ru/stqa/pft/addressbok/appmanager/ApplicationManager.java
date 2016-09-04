@@ -10,7 +10,7 @@ public class ApplicationManager {
   private SessionHelper sessionHelper;
   private  NavigationHelper navigationHelper;
   private  GroupHelper groupHelper;
-  
+
   public void init() {
     wd = new FirefoxDriver();
     wd.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
