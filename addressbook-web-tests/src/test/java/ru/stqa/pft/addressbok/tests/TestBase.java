@@ -13,12 +13,12 @@ public class TestBase {
 
   @BeforeMethod
   public void setUp() throws Exception {
-    app.init(); //выделен вспомогательный метод
+    app.init();
   }
 
   @AfterMethod
   public void tearDown() {
-    app.stop();//выделен вспомогательный метод окончания теста
+    app.stop();
   }
 
 }

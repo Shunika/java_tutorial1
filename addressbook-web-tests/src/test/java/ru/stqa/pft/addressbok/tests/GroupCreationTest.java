@@ -11,11 +11,11 @@ public class GroupCreationTest extends TestBase {
   @Test
   public void testGroupCreation() {//method
 
-    app.gotoGroupPage(); //выделили вспомогательный метод
-    app.initGroupCreation();//выделили вспомогательный метод
-    app.fillGroupForm(new GroupData("test1", "test2", "test3")); //создался новый объект с параметрами
-    app.submitGroupCreation();//выделили вспомогательный метод
-    app.returnToGroupPage();//выделили вспомогательный метод
+    app.getNavigationHelper().gotoGroupPage(); //выделили вспомогательный метод
+    app.getGroupHelper().initGroupCreation();//выделили вспомогательный метод
+    app.getGroupHelper().fillGroupForm(new GroupData("test1", "test2", "test3")); //создался новый объект с параметрами
+    app.getGroupHelper().submitGroupCreation();//выделили вспомогательный метод
+    app.getGroupHelper().returnToGroupPage();//выделили вспомогательный метод
   }
 
 }
