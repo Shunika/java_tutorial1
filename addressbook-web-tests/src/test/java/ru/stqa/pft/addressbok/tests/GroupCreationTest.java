@@ -1,7 +1,9 @@
 package ru.stqa.pft.addressbok.tests;
 
 
+import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+import ru.stqa.pft.addressbok.model.ContactData;
 import ru.stqa.pft.addressbok.model.GroupData;
 
 
@@ -17,5 +19,6 @@ public class GroupCreationTest extends TestBase {
     app.getGroupHelper().submitGroupCreation();//выделили вспомогательный метод
     app.getGroupHelper().returnToGroupPage();//выделили вспомогательный метод
   }
+
 
 }

@@ -16,5 +16,13 @@ public class NavigationHelper extends HelperBase {
   public void gotoGroupPage() {//вставили метод из helperbase, вставили параметры -  локатор и  текст
    click(By.linkText("groups"));
   }
+
+  public void goToHomePage() {
+    click(By.linkText("home page"));
+  }
+
+  public  void goToAddNewContact() {
+    click (By.linkText("add new"));
+  }
 }
 
