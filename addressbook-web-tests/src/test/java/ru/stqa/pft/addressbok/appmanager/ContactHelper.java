@@ -1,6 +1,7 @@
 package ru.stqa.pft.addressbok.appmanager;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import ru.stqa.pft.addressbok.model.ContactData;
 
@@ -11,7 +12,7 @@ public class ContactHelper extends HelperBase{
 
 
 
-  public ContactHelper(FirefoxDriver wd) {
+  public ContactHelper(WebDriver wd) {
     super (wd);
   }
 
@@ -44,6 +45,10 @@ public class ContactHelper extends HelperBase{
 
   public void deleteContact() {
     click (By.xpath("//div[@id='content']/form[2]/div[2]/input"));
+  }
+
+  public void editContact() {
+    click (By.xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img"));
   }
 }
 
